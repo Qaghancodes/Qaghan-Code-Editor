@@ -1,0 +1,61 @@
+:root {
+    --primary-bg: #1e1e1e;
+    --secondary-bg: #252526;
+    --border-color: #454545;
+    --text-color: #d4d4d4;
+    --accent-color: #007acc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 1fr 25px;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: var(--secondary-bg);
+    border-right: 1px solid var(--border-color);
+    grid-row: 1 / -1;
+}
+
+.main-content {
+    display: grid;
+    grid-template-rows: 1fr 200px;
+    overflow: hidden;
+}
+
+.editor {
+    height: 100%;
+    overflow: hidden;
+}
+
+.terminal {
+    background-color: var(--secondary-bg);
+    border-top: 1px solid var(--border-color);
+    padding: 8px;
+}
+
+.status-bar {
+    background-color: var(--secondary-bg);
+    border-top: 1px solid var(--border-color);
+    grid-column: 2 / -1;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+} 
